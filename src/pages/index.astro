@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Image Gallery">
+	<main>
+		<h1>Image <span class="text-gradient">Gallery</span></h1>
+		<ul role="list" class="link-card-grid">
+			<Card src="https://cdn.pixabay.com/photo/2023/01/12/15/22/taro-7714366_1280.jpg" />
+			<Card src="https://cdn.pixabay.com/photo/2023/01/14/19/50/flower-7718952_1280.jpg" />
+			<Card src="https://cdn.pixabay.com/photo/2022/12/16/01/41/balloons-7658766_1280.jpg" />
+			<Card src="https://cdn.pixabay.com/photo/2023/01/12/15/22/taro-7714366_1280.jpg" />
+			<Card src="../../images/work1.jpg" />
+			<Card src="../../images/work2.jpg" />
+			<Card src="../../images/work3.jpg" />
+			<Card src="../../images/work4.jpg" />
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 120ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		text-align: center;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
